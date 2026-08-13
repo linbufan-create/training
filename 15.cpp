@@ -42,30 +42,30 @@ vector<pair<int, int>> a[N];
 long long dp[N];
 
 int main() {
-        ios::sync_with_stdio(0);
-        cin.tie(nullptr);
-        cin >> n >> m >> k;
-        for (int i = 1; i <= n; i++) {
-                int l, r, w;
-                cin >> l >> r >> w;
-                if (l + k - 1 <= r) {
-                        a[l + k - 1].push_back({r, w});
-                }
-        }
-        dp[0] = 0;
-        typedef pair<int, int> pi;
-        priority_queue<pi, vector<pi>, less<pi>> pq;
-        for (int i = 1; i <= m; i++) {
-                dp[i] = dp[i - 1];
-                for (pi j : a[i]) {
-                        pq.push({j.second, j.first});
-                }
-                while (!pq.empty() && pq.top().second < i) {
-                        pq.pop();
-                }
-                if (!pq.empty()) {
-                        dp[i] = max(dp[i], dp[i - k] + pq.top().first);
-                }
-        }
-        cout << dp[m] << endl;
+	ios::sync_with_stdio(0);
+	cin.tie(nullptr);
+	cin >> n >> m >> k;
+	for (int i = 1; i <= n; i++) {
+		int l, r, w;
+		cin >> l >> r >> w;
+		if (l + k - 1 <= r) {
+			a[l + k - 1].push_back({r, w});
+		}
+	}
+	dp[0] = 0;
+	typedef pair<int, int> pi;
+	priority_queue<pi, vector<pi>, less<pi>> pq;
+	for (int i = 1; i <= m; i++) {
+		dp[i] = dp[i - 1];
+		for (pi j : a[i]) {
+			pq.push({j.second, j.first});
+		}
+		while (!pq.empty() && pq.top().second < i) {
+			pq.pop();
+		}
+		if (!pq.empty()) {
+			dp[i] = max(dp[i], dp[i - k] + pq.top().first);
+		}
+	}
+	cout << dp[m] << endl;
 }

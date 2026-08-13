@@ -161,6 +161,6 @@ SpacesInParens: Never
 SpacesInSquareBrackets: false
 Standard: Auto
 TabWidth: 8
-UseTab: Never
+UseTab: Always
 VerilogBreakBetweenInstancePorts: true
 WrapNamespaceBodyWithEmptyLines: Never
