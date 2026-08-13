@@ -1,6 +1,5 @@
-g++
 -std=c++17
---target=x86_64-w64-windows-gnu
--IC:/msys64/ucrt64/include
--IC:/msys64/ucrt64/x86_64-w64-mingw32/include
+-I/usr/include
+-I/usr/include/x86_64-linux-gnu
+-I/usr/local/include
 -Wall
