@@ -2,3 +2,4 @@
 .vs/
 .reasonix/
 reasonix.toml
+*.exe
