@@ -4,3 +4,4 @@ g++
 -IC:/msys64/ucrt64/include
 -IC:/msys64/ucrt64/x86_64-w64-mingw32/include
 -Wall
+-Wexrta
