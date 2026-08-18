@@ -1,5 +1,8 @@
 .vscode/
 .vs/
-.reasonix/
+.reasonix/*
 reasonix.toml
 *.exe
+.opencode/*
+.opencode
+.reasonix
